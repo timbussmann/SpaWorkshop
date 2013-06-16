@@ -10,13 +10,16 @@
     <div class="container">
         <div class="row header">
             <div class="span12">
-                <h1>Scrumboard Workshop</h1>
+                <h1>The honest Scrumboard</h1>
             </div>
         </div>
         <div class="row">
-            <div class="span12" ng-controller="scrumboardController">
+            <div class="span5" ng-controller="scrumboardController">
                 <h3>Stories:</h3>
-                <p>put the stories here</p>
+                <div class="story" ng-repeat="story in stories">
+                    <h4>{{story.Title}}</h4>
+                    <p>{{story.Description}}</p>
+                </div>
             </div>
         </div>
     </div>

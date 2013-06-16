@@ -2,3 +2,15 @@
     background-color: rgba(96, 144, 174, 0.2);
     border-radius: 0 0 10px 10px;
 }
+
+.story {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.story:hover {
+    background-color: rgba(118, 178, 215, 0.2);
+}

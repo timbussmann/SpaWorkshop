@@ -7,7 +7,7 @@
 
     public class StoriesController : ApiController
     {
-        private IStoryRepository storyRepository;
+        private readonly IStoryRepository storyRepository;
 
         public StoriesController(IStoryRepository storyRepository)
         {
