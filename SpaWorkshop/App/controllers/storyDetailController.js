@@ -1,4 +1,4 @@
-﻿app.controller('storyDetailController', function ($scope, $http, $routeParams) {
+﻿app.controller('storyDetailController', function ($scope, $http, $routeParams, $location) {
 
     $scope.states = ['Sprint Backlog', 'Work In Progress', 'To Verify', 'Done'];
 
@@ -7,7 +7,9 @@
     });
 
     $scope.saveStory = function() {
-        $http.put('/api/story/', $scope.story);
+        $http.put('/api/story/', $scope.story).success(function() {
+            $location.url('/scrumboard');
+        });
     };
 
 });
