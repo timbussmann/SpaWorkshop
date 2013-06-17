@@ -14,13 +14,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="span5" ng-controller="scrumboardController">
-                <h3>Stories:</h3>
-                <div class="story" ng-repeat="story in stories">
-                    <h4>{{story.Title}}</h4>
-                    <p>{{story.Description}}</p>
-                </div>
-            </div>
+            <ng-view></ng-view>
         </div>
     </div>
     <script src="Scripts/jquery-1.9.1.js"></script>
