@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>SPA Workshop - bbv Forum Juni 2013</title>
-    <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link href="Content/toastr.css" rel="stylesheet" />
-    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/toastr.css" rel="stylesheet" />
+    <link href="/Content/Site.css" rel="stylesheet" />
 </head>
 <body ng-app="scrumboard">
     <div class="container">
@@ -13,17 +13,17 @@
                 <h1>The honest Scrumboard</h1>
             </div>
         </div>
-        <div class="row">
+        <div id="content" class="row">
             <ng-view></ng-view>
         </div>
     </div>
-    <script src="Scripts/jquery-1.9.1.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/jquery.signalR-1.1.1.js"></script>
-    <script src="Scripts/toastr.js"></script>
-    <script src="Scripts/angular.js"></script>
-    <script src="App/appModule.js"></script>
-    <script src="App/controllers/scrumboardController.js"></script>
-    <script src="App/controllers/storyDetailController.js"></script>
+    <script src="/Scripts/jquery-1.9.1.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/jquery.signalR-1.1.1.js"></script>
+    <script src="/Scripts/toastr.js"></script>
+    <script src="/Scripts/angular.js"></script>
+    <script src="/App/appModule.js"></script>
+    <script src="/App/controllers/scrumboardController.js"></script>
+    <script src="/App/controllers/storyDetailController.js"></script>
 </body>
 </html>
