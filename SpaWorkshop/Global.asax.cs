@@ -1,4 +1,6 @@
-﻿namespace SpaWorkshop
+﻿using System.Web.Routing;
+
+namespace SpaWorkshop
 {
     using System.Web.Http;
 
@@ -6,6 +8,7 @@
     {
         protected void Application_Start()
         {
+            RouteTable.Routes.MapHubs();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
         }
     }

@@ -115,6 +115,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\StoryController.cs" />
+    <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Models\IStoryRepository.cs" />
     <Compile Include="Controllers\StoriesController.cs" />
     <Compile Include="Global.asax.cs">
