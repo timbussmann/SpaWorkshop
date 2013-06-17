@@ -1,12 +1,13 @@
-﻿namespace SpaWorkshop.Models
+﻿using System.Linq;
+
+namespace SpaWorkshop.Models
 {
     using System.Collections.Generic;
 
     public class StoryRepository : IStoryRepository
     {
-        public StoryRepository()
-        {
-            this.UserStories = new[]
+        private readonly IList<UserStory> userStories =
+            new[]
                 {
                     new UserStory
                         {
@@ -54,8 +55,22 @@
                             State = "Sprint Backlog"
                         },
                 };
+
+        public StoryRepository()
+        {
+            this.UserStories = userStories;
         }
 
         public IEnumerable<UserStory> UserStories { get; private set; }
+
+        public void UpdateUserStory(UserStory story)
+        {
+            UserStory originalStory = this.userStories.SingleOrDefault(s => s.Id == story.Id);
+            if (originalStory != null)
+            {
+                int storyIndex = this.userStories.IndexOf(originalStory);
+                this.userStories[storyIndex] = story;
+            }
+        }
     }
 }

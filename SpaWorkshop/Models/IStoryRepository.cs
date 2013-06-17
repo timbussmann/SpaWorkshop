@@ -5,5 +5,7 @@
     public interface IStoryRepository
     {
         IEnumerable<UserStory> UserStories { get; }
+
+        void UpdateUserStory(UserStory story);
     }
 }
