@@ -44,7 +44,7 @@
                             StackRank = 970,
                             State = "Sprint Backlog"
                         },
-                    new UserStory()
+                    new UserStory
                         {
                             Id = 5,
                             Title = "Drag Story",
