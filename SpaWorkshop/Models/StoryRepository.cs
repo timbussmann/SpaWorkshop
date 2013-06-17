@@ -22,7 +22,7 @@
                             Id = 2,
                             Title = "Update story state",
                             Description =
-                                "As a Scrum Master, I want to update the state of a story so that the code monkeys dont all implement the same story.",
+                                "As a Scrum Master, I want to update the state of a story so the code monkeys dont all implement the same story.",
                             StackRank = 990,
                             State = "Sprint Backlog"
                         },
