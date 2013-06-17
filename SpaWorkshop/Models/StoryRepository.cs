@@ -22,7 +22,7 @@
                             Id = 2,
                             Title = "Update story state",
                             Description =
-                                "As a Scrum Master, I want to update the state of a story so the code monkeys dont all implement the same story.",
+                                "As a Scrum Master, I want to update the state of a story so the code monkeys don't all implement the same story.",
                             StackRank = 990,
                             State = "Sprint Backlog"
                         },
@@ -40,7 +40,7 @@
                             Id = 4,
                             Title = "Show Scrumboard",
                             Description =
-                                "As a Scrum Master I want to see the Scrumboard so I have an overview of how slowly the team is working.",
+                                "As a Scrum Master I want to see the Scrumboard so I have an overview of how slowly the sprint is progressing.",
                             StackRank = 970,
                             State = "Sprint Backlog"
                         },
