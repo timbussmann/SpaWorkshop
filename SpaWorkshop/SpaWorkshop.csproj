@@ -127,8 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\appModule.js" />
-    <Content Include="App\controllers\scrumboardController.js" />
-    <Content Include="App\controllers\storyDetailController.js" />
+    <Content Include="App\controllers.js" />
     <Content Include="App\views\scrumboardView.html" />
     <Content Include="App\views\storyDetailView.html" />
     <Content Include="Content\bootstrap-responsive.css" />

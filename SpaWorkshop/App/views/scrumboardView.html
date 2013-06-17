@@ -1,4 +1,4 @@
-﻿<div id="scrumboardView" class="span5">
+﻿<div id="scrumboardView" class="span5" ng-controller="scrumboardController">
     <h3>Stories:</h3>
     <a href="/details/{{story.Id}}" ng-repeat="story in stories">
         <div class="story" >
@@ -7,7 +7,7 @@
         </div>
     </a>
 </div>
-<div id="chatView" class="span7">
+<div id="chatView" class="span7" ng-controller="chatController">
     <h3>Chat:</h3>
     <textarea rows="20" disabled="disabled" class="span7" ng-model="messages"></textarea>
     <form class="form-inline" ng-submit="sendMessage()">
