@@ -5,4 +5,9 @@
     $http.get('/api/story/' + $routeParams.storyId).success(function(story) {
         $scope.story = story;
     });
+
+    $scope.saveStory = function() {
+        $http.put('/api/story/', $scope.story);
+    };
+
 });
