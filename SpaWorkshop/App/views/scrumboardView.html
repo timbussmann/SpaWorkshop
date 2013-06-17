@@ -7,3 +7,13 @@
         </div>
     </a>
 </div>
+<div id="chatView" class="span7">
+    <h3>Chat:</h3>
+    <textarea rows="20" disabled="disabled" class="span7" ng-model="messages"></textarea>
+    <form class="form-inline" ng-submit="sendMessage()">
+        <div class="input-append">
+            <input type="text" class="input-xlarge" placeholder="type here to chat" ng-model="chatMessage">
+            <button class="btn" type="submit">Send</button>
+        </div>
+    </form>
+</div>
