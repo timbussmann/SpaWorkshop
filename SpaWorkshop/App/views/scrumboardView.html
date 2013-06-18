@@ -7,18 +7,18 @@
         </div>
     </a>
 </div>
-<div id="chatView" class="span7" ng-controller="chatController">
+<div id="chatView" class="span7">
     <h3>Chat:</h3>
     <div class="row">
         <div class="span7">
-            <textarea rows="20" disabled="disabled" class="span7" ng-model="messages"></textarea>
+            <textarea rows="20" disabled="disabled" class="span7"></textarea>
         </div>
     </div>
     <div class="row">
         <div class="span7">
-            <form class="form-inline" ng-submit="submitMessage()">
+            <form class="form-inline"">
                 <div class="controls controls-row">
-                    <input type="text" class="span5" placeholder="type here to chat" ng-model="chatMessage">
+                    <input type="text" class="span5" placeholder="type here to chat">
                     <button class="btn span2" type="submit">Send</button>
                 </div>
             </form>
