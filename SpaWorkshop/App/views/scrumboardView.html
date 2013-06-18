@@ -1,4 +1,4 @@
-﻿<div id="scrumboardView" class="span5" ng-controller="scrumboardController">
+﻿<div id="scrumboardView" class="span5">
     <h3>Stories:</h3>
     <a href="/details/{{story.Id}}" ng-repeat="story in stories">
         <div class="story" >
@@ -6,24 +6,4 @@
             <p>{{story.Description}}</p>
         </div>
     </a>
-</div>
-<div id="chatView" class="span7">
-    <h3>Chat:</h3>
-    <div class="row">
-        <div class="span7">
-            <textarea rows="20" disabled="disabled" class="span7"></textarea>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span7">
-            <form class="form-inline">
-                <div class="controls controls-row">
-                    <!--Dieses Input Element ist das Eingabefeld für Chatnachrichten: -->
-                    <input type="text" class="span5" placeholder="type here to chat">
-                    <button class="btn span2" type="submit">Send</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
 </div>
