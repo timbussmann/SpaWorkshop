@@ -18,9 +18,5 @@
             return this.storyRepository.UserStories.Single(u => u.Id == id);
         }
 
-        public void PutStory(UserStory story)
-        {
-            this.storyRepository.UpdateUserStory(story);
-        }
     }
 }
