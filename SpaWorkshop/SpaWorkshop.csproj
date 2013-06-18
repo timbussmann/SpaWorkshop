@@ -138,14 +138,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
-    <Content Include="Scripts\angular-bootstrap-prettify.js" />
-    <Content Include="Scripts\angular-bootstrap.js" />
-    <Content Include="Scripts\angular-cookies.js" />
-    <Content Include="Scripts\angular-loader.js" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-resource.js" />
-    <Content Include="Scripts\angular-sanitize.js" />
-    <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\bootstrap.js" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
