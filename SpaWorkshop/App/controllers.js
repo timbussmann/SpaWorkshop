@@ -14,10 +14,6 @@ app.controller('chatController', function ($scope, chatService) {
         $scope.messages = chatService.messages;
         $scope.chatMessage = '';
     };
-
-    $scope.$on('MessageReceived', function() {
-        $scope.messages = chatService.messages;
-    });
 });
 
 app.controller('storyDetailController', function ($scope, $http, $routeParams, $location) {
