@@ -15,11 +15,11 @@
 app.service('chatService', function($rootScope) {
 
     var self = this;
-    this.messages = '';
+    this.messages = sessionStorage.getItem('chat') || '';
 
     var hub = $.connection.chatHub;
     hub.client.addMessage = function(message) {
-        self.messages += 'Someone else: ' + message + '\n';
+        addMessage('Someone else: ' + message);
 
         $rootScope.$apply(function() {
             $rootScope.$broadcast('MessageReceived');
@@ -28,7 +28,12 @@ app.service('chatService', function($rootScope) {
     $.connection.hub.start();
 
     this.sendMessage = function(message) {
-        self.messages += 'you: ' + message + '\n';
+        addMessage('You: ' + message);
         hub.server.sendMessage(message);
     };
+
+    function addMessage(message) {
+        self.messages += message + '\n';
+        sessionStorage.setItem('chat', self.messages);
+    }
 });
