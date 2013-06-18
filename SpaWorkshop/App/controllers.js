@@ -5,17 +5,6 @@
     });
 });
 
-app.controller('chatController', function ($scope, chatService) {
-    
-    $scope.messages = chatService.messages;
-
-    $scope.submitMessage = function () {
-        chatService.sendMessage($scope.chatMessage);
-        $scope.messages = chatService.messages;
-        $scope.chatMessage = '';
-    };
-});
-
 app.controller('storyDetailController', function ($scope, $http, $routeParams, $location) {
 
     $scope.states = ['Sprint Backlog', 'Work In Progress', 'To Verify', 'Done'];
