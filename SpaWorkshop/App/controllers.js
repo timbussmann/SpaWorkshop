@@ -8,12 +8,12 @@
 app.controller('chatController', function ($scope) {
 
     $scope.messages = sessionStorage.getItem('chat') || '';
+    
     var hub = $.connection.chatHub;
     hub.client.addMessage = function (message) {
         $scope.messages += 'Someone else: ' + message + '\n';
         $scope.$apply();
     };
-
     $.connection.hub.start();
 
     $scope.sendMessage = function () {

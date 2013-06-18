@@ -9,11 +9,19 @@
 </div>
 <div id="chatView" class="span7" ng-controller="chatController">
     <h3>Chat:</h3>
-    <textarea rows="20" disabled="disabled" class="span7" ng-model="messages"></textarea>
-    <form class="form-inline" ng-submit="sendMessage()">
-        <div class="input-append">
-            <input type="text" class="input-xlarge" placeholder="type here to chat" ng-model="chatMessage">
-            <button class="btn" type="submit">Send</button>
+    <div class="row">
+        <div class="span7">
+            <textarea rows="20" disabled="disabled" class="span7" ng-model="messages"></textarea>
         </div>
-    </form>
+    </div>
+    <div class="row">
+        <div class="span7">
+            <form class="form-inline" ng-submit="sendMessage()">
+                <div class="controls controls-row">
+                    <input type="text" class="span5" placeholder="type here to chat" ng-model="chatMessage">
+                    <button class="btn span2" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
