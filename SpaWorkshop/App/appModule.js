@@ -18,14 +18,16 @@ app.service('chatService', function($rootScope) {
     this.messages = sessionStorage.getItem('chat') || '';
 
     var hub = $.connection.chatHub;
-    hub.client.addMessage = function(message) {
-        addMessage('Someone else: ' + message);
+    if (hub){
+        hub.client.addMessage = function(message) {
+            addMessage('Someone else: ' + message);
 
-        $rootScope.$apply(function() {
-            $rootScope.$broadcast('MessageReceived');
-        });
-    };
-    $.connection.hub.start();
+            $rootScope.$apply(function() {
+                $rootScope.$broadcast('MessageReceived');
+            });
+        };
+        $.connection.hub.start();
+    }
 
     this.sendMessage = function(message) {
         addMessage('You: ' + message);
