@@ -9,7 +9,7 @@ app.controller('chatController', function ($scope, chatService) {
     
     $scope.messages = chatService.messages;
 
-    $scope.sendMessage = function () {
+    $scope.submitMessage = function () {
         chatService.sendMessage($scope.chatMessage);
         $scope.messages = chatService.messages;
         $scope.chatMessage = '';
