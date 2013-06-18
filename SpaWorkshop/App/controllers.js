@@ -5,26 +5,18 @@
     });
 });
 
-app.controller('chatController', function ($scope) {
-
-    $scope.messages = sessionStorage.getItem('chat') || '';
+app.controller('chatController', function ($scope, chatService) {
     
-    var hub = $.connection.chatHub;
-    hub.client.addMessage = function (message) {
-        $scope.messages += 'Someone else: ' + message + '\n';
-        $scope.$apply();
-    };
-    $.connection.hub.start();
+    $scope.messages = chatService.messages;
 
     $scope.sendMessage = function () {
-        var message = $scope.chatMessage;
-        $scope.messages += 'You: ' + message + '\n';
-        hub.server.sendMessage(message);
+        chatService.sendMessage($scope.chatMessage);
+        $scope.messages = chatService.messages;
         $scope.chatMessage = '';
     };
 
-    $scope.$on('$destroy', function() {
-        sessionStorage.setItem('chat', $scope.messages);
+    $scope.$on('MessageReceived', function() {
+        $scope.messages = chatService.messages;
     });
 });
 
