@@ -6,8 +6,8 @@
 });
 
 app.controller('chatController', function ($scope) {
-    
-    $scope.messages = '';
+
+    $scope.messages = sessionStorage.getItem('chat') || '';
     var hub = $.connection.chatHub;
     hub.client.addMessage = function (message) {
         $scope.messages += 'Someone else: ' + message + '\n';
@@ -22,6 +22,10 @@ app.controller('chatController', function ($scope) {
         hub.server.sendMessage(message);
         $scope.chatMessage = '';
     };
+
+    $scope.$on('$destroy', function() {
+        sessionStorage.setItem('chat', $scope.messages);
+    });
 });
 
 app.controller('storyDetailController', function ($scope, $http, $routeParams, $location) {
