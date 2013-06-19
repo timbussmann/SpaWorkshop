@@ -13,13 +13,17 @@
             </div>
         </div>
         <div class="row">
-            <ng-view></ng-view>
+            <div id="scrumboardView" class="span5">
+                <h3>Stories:</h3>
+                <div class="story" >
+                    <h4><!--put the title here--></h4>
+                    <p><!--put the description here--></p>
+                </div>
+             </div>
         </div>
     </div>
     <script src="/Scripts/jquery-1.9.1.js"></script>
     <script src="/Scripts/bootstrap.js"></script>
-    <script src="/Scripts/jquery.signalR-1.1.1.js"></script>
-    <script src="/signalr/hubs"></script>
     <script src="/Scripts/angular.js"></script>
     <script src="/App/appModule.js"></script>
     <script src="/App/controllers.js"></script>
