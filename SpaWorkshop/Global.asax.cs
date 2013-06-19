@@ -8,7 +8,6 @@ namespace SpaWorkshop
     {
         protected void Application_Start()
         {
-            RouteTable.Routes.MapHubs();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
         }
     }
