@@ -16,7 +16,8 @@
 
         public IEnumerable<UserStory> GetStories()
         {
-            return storyRepository.UserStories.OrderByDescending(s => s.StackRank);
+            // return the stories ordered by StackRank instead of null
+            return null;
         }
     }
 }
