@@ -1,6 +1,6 @@
 ﻿<div id="scrumboardView" class="span5">
     <h3>Stories:</h3>
-    <a ng-repeat="story in stories">
+    <a href="/story/{{story.Id}}" ng-repeat="story in stories">
         <div class="story" >
             <h4>{{story.Title}}</h4>
             <p>{{story.Description}}</p>
